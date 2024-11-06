@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neosyx - Chat</title>
+    <!-- link rel="stylesheet" href="styles.css" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sanchez:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', serif;
+        }
+
+        aside {
+            border-right: 1px solid lightgray;
+
+        }
+
+        nav {
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 0;
+            padding: 1rem 0.5rem;
+        }
+
+        nav .selected {
+            background-color: lightgray;
+            border-radius: 0.25rem;
+            font-weight: bold;
+        }
+
+        .chat-wrapper {
+            padding: 0.5rem;
+            display: grid;
+            grid-template-rows: 4fr 1fr;
+            /* background-color: lightcoral; */
+        }
+
+        .chat-wrapper .messages {
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .messages .message-other {
+            display: flex;
+            justify-content: start;
+        }
+
+        .messages .message-self {
+            display: flex;
+            justify-content: end;
+        }
+
+        .message-self p {
+            color: white;
+            background-color: darkgreen;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            text-align: right;
+            width: fit-content;
+        }
+
+        .message-other p {
+            background-color: gray;
+            color: white;
+            padding: 0.5rem;
+            display: inline;
+            width: fit-content;
+            border-radius: 0.5rem;
+
+        }
+
+        .container {
+            border: 1px solid lightgray;
+            border-radius: 0.5rem;
+
+            display: grid;
+            grid-template-columns: 2fr 5fr
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 5px;
+        }
+
+        /* 1rem = 16px  */
+        .input-group input {
+            padding: 0 0.3rem;
+            width: 100%;
+            height: 2.2rem;
+            border: 1px solid lightgray;
+            outline-color: lightgray;
+            border-radius: 0.25rem;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 0.75rem 1.5rem;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn.btn-primary {
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 0.25rem;
+        }
+
+        .btn.btn-success {
+            background-color: green;
+            color: white;
+        }
+
+        .btn.btn-icon {
+            border-radius: 100%;
+        }
+
+        .receiver {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .receiver img {
+            padding: 0.5rem;
+            width: 2rem;
+            border-radius: 100%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li>Diego Moura</li>
+                    <li class="selected">Alex Oliveira</li>
+                    <li>Igor A.</li>
+                    <li>Hildean Dantas</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="chat-wrapper">
+            <div>
+                <div class="receiver">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/lego/7.jpg" alt="">
+                    <spam>Alex Oliveira</spam>
+                </div>
+                <div class="messages">
+                    <div class="message-self">
+                        <p>Olá meu nome é Diego</p>
+                    </div>
+                    <div class="message-other">
+                        <p>Olá Diego, meu nome é Diego</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input id="message-input" type="text">
+                <button onclick="clickado()" class="btn btn-primary">
+                    Enviar
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const clickado = () => {
+            console.log('OI')
+        }
+
+
+    </script>
+
+</body>
+
+</html>

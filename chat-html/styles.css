@@ -1,0 +1,21 @@
+body {}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-large {
+    border: 5px solid red;
+    font-size: 32px;
+}
+
+#titulo {
+    background-color: darkgray;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #CEDE02;
+}
